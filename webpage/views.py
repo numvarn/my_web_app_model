@@ -4,7 +4,8 @@ from django.shortcuts import render, HttpResponse
 
 
 def home(request):
-    return HttpResponse("This is my django website")
+    return render(request, 'index.html')
+    # return HttpResponse("This is my django website")
 
 
 def about(request):
