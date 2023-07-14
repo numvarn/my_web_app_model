@@ -5,12 +5,11 @@ from django.shortcuts import render, HttpResponse
 
 def home(request):
     return render(request, 'index.html')
-    # return HttpResponse("This is my django website")
 
 
 def about(request):
-    return HttpResponse("About me")
+    return render(request, 'about.html')
 
 
 def contact(request):
-    return HttpResponse("Contact me")
+    return render(request, 'contact.html')
