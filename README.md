@@ -11,8 +11,19 @@
 2. การสร้าง python virtual environment ใน project
 
 ```shell
+> cd <projectname>
 > python -m venv env
 ```
+
+3. การสร้าง application ใน project
+
+```shell
+> python manage.py startapp <appname>
+```
+
+---
+
+## Screen Capture
 
 ![image](https://numvarn.github.io/resume/asset/images/web/my_webapp/001.png)
 
