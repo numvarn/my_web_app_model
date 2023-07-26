@@ -5,7 +5,13 @@
 1. การสร้าง project ด้วย Django
 
 ```shell
-django-admin startproject <projectname>
+> django-admin startproject <projectname>
+```
+
+2. การสร้าง python virtual environment ใน project
+
+```shell
+> python -m venv env
 ```
 
 ![image](https://numvarn.github.io/resume/asset/images/web/my_webapp/001.png)
