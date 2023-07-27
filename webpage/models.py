@@ -1,6 +1,11 @@
 from django.db import models
 
 # Create your models here.
+prefix_choices = (
+    (1, "นาย"),
+    (2, "นางสาว"),
+    (3, "นาง"),
+)
 
 
 class Student(models.Model):
@@ -8,6 +13,7 @@ class Student(models.Model):
 
     # TODO: Define fields here
     std_id = models.IntegerField()
+    prefix = models.IntegerField(choices=prefix_choices, default=1)
     name = models.CharField(max_length=255)
     lastname = models.CharField(max_length=255)
     phone = models.CharField(max_length=15)
@@ -21,4 +27,4 @@ class Student(models.Model):
 
     def __str__(self):
         """Unicode representation of Student."""
-        pass
+        return self.name + " " + self.lastname
