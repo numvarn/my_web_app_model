@@ -8,6 +8,23 @@ prefix_choices = (
 )
 
 
+class Major(models.Model):
+    """Model definition for Major."""
+
+    # TODO: Define fields here
+    name = models.CharField(max_length=255)
+
+    class Meta:
+        """Meta definition for Major."""
+
+        verbose_name = 'Major'
+        verbose_name_plural = 'Majors'
+
+    def __str__(self):
+        """Unicode representation of Major."""
+        return self.name
+
+
 class Student(models.Model):
     """Model definition for Student."""
 
@@ -18,6 +35,7 @@ class Student(models.Model):
     lastname = models.CharField(max_length=255)
     phone = models.CharField(max_length=15)
     address = models.TextField()
+    major = models.ForeignKey(Major, on_delete=models.CASCADE, default=1)
 
     class Meta:
         """Meta definition for Student."""
